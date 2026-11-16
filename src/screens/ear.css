@@ -1,0 +1,23 @@
+.ear-screen { display: flex; flex-direction: column; gap: 8px; }
+.ear-tabs { display: flex; gap: 6px; }
+.ear-tab { flex: 1; padding: 8px 4px; border: 1px solid #333; background: #1b1b1b; color: #ccc; border-radius: 6px; text-transform: capitalize; }
+.ear-tab.active { background: #2a4; color: #fff; border-color: #2a4; }
+.ear-controls { display: flex; align-items: center; gap: 8px; }
+.ear-controls label { }
+.ear-controls select { padding: 6px; border-radius: 6px; background: #1b1b1b; color: #eee; border: 1px solid #333; }
+.ear-btn { padding: 8px 14px; border: 0; border-radius: 8px; background: #333; color: #eee; }
+.ear-btn.small { padding: 6px 10px; font-size: 13px; }
+.ear-scorebar { display: flex; justify-content: space-between; color: #aaa; font-size: 14px; }
+.ear-play { display: flex; gap: 8px; justify-content: center; }
+.ear-play-btn { padding: 12px 24px; border: 0; border-radius: 8px; background: #2a4; color: #fff; font-size: 18px; }
+.ear-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 8px; }
+.ear-option { padding: 12px 8px; border: 1px solid #333; border-radius: 8px; background: #1b1b1b; color: #eee; font-size: 16px; }
+.ear-option.chosen { border-color: #888; }
+.ear-option.correct { background: #1a4; border-color: #2a6; }
+.ear-option.wrong { background: #411; border-color: #a22; }
+.ear-feedback { text-align: center; padding: 10px; border-radius: 8px; font-weight: 600; }
+.ear-feedback.correct { background: #1a4; color: #9f9; }
+.ear-feedback.wrong { background: #411; color: #f99; }
+.ear-stats { background: #151515; padding: 10px; border-radius: 8px; }
+.ear-stat-row { display: flex; justify-content: space-between; padding: 4px 0; }
+.ear-stat-total { color: #888; font-size: 13px; }

@@ -1,0 +1,250 @@
+/* Fretboard: horizontal like tab. High e on top, nut on the left, frets 0-12 left to right. */
+.fretboard {
+  display: grid;
+  grid-template-columns: 14px repeat(13, minmax(0, 1fr));
+  grid-template-rows: repeat(6, 34px) 18px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.fb-name {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #aaa;
+}
+
+.fb-name.fb-dim {
+  opacity: 0.3;
+}
+
+.fb-fretnum {
+  grid-row: 7;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.fb-fretnum-anchor {
+  color: var(--accent, #f2a33a);
+  font-weight: 700;
+}
+
+.fb-anchor {
+  grid-row: 1 / -1;
+  background: rgba(242, 163, 58, 0.18);
+  border-radius: 6px;
+}
+
+/* Position markers sit between the strings, centered on the rows they span. */
+.fb-dot {
+  align-self: center;
+  justify-self: center;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3a3a3a;
+  pointer-events: none;
+}
+
+.fb-cell {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-right: 1px solid #555; /* the fret wire */
+  background: transparent;
+  color: inherit;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fb-cell.fb-open {
+  border-right: 5px solid #ddd; /* the nut */
+}
+
+/* The string line. */
+.fb-cell::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 1px);
+  height: 2px;
+  background: #bbb;
+}
+
+.fb-cell.fb-dim::before {
+  opacity: 0.2;
+}
+
+.fb-hl {
+  position: relative;
+  width: min(28px, calc(100% - 2px));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #121212;
+}
+
+.fb-prompt {
+  background: var(--accent, #f2a33a);
+}
+
+.fb-correct {
+  background: #3ecf6a;
+}
+
+.fb-wrong {
+  background: #ef4b4b;
+}
+
+/* NotePad: answer buttons. */
+.notepad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.notepad-btn {
+  min-height: 56px;
+  min-width: 0;
+  padding: 0 4px;
+  border: none;
+  border-radius: 12px;
+  background: #2a2a2a;
+  color: #f2f2f2;
+  font-size: 1.25rem;
+  font-weight: 600;
+  touch-action: manipulation;
+}
+
+.notepad-chromatic .notepad-btn {
+  font-size: 1rem;
+}
+
+.notepad-btn:active {
+  background: #3a3a3a;
+}
+
+.notepad-btn:disabled {
+  opacity: 0.5;
+}
+
+/* GradeButtons: Got it / Missed. */
+.grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.grade-btn {
+  min-height: 72px;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #121212;
+  touch-action: manipulation;
+}
+
+.grade-got {
+  background: #3ecf6a;
+}
+
+.grade-missed {
+  background: #ef4b4b;
+}
+
+.grade-btn:active {
+  opacity: 0.8;
+}
+
+.grade-btn:disabled {
+  opacity: 0.4;
+}
+
+/* Theory answer pads: SpellPad, ChordPad, NumeralPad, NumberPad. */
+.spellpad,
+.chordpad,
+.numeralpad {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.pad-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.pad-acc {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pad-numbers {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.pad-btn {
+  min-height: 56px;
+  min-width: 0;
+  padding: 0 4px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: #2a2a2a;
+  color: #f2f2f2;
+  font-size: 1.25rem;
+  font-weight: 600;
+  touch-action: manipulation;
+}
+
+.pad-btn:active {
+  background: #3a3a3a;
+}
+
+.pad-btn.pad-on {
+  border-color: var(--accent, #f2a33a);
+  color: var(--accent, #f2a33a);
+}
+
+.pad-btn:disabled {
+  opacity: 0.5;
+}
+
+.pad-pending {
+  min-height: 32px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent, #f2a33a);
+}

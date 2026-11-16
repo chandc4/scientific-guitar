@@ -1,0 +1,11 @@
+.songlab-screen { display: flex; flex-direction: column; gap: 8px; }
+.songlab-body { display: flex; flex-direction: column; gap: 10px; }
+.songlab-input { padding: 8px; border-radius: 6px; background: #1b1b1b; color: #eee; border: 1px solid #333; font-size: 16px; }
+.songlab-samples { display: flex; flex-wrap: wrap; gap: 6px; }
+.songlab-sample { padding: 4px 8px; border: 1px solid #333; border-radius: 6px; background: #1b1b1b; color: #eee; font-size: 12px; }
+.songlab-chords { display: flex; flex-wrap: wrap; gap: 8px; }
+.songlab-chord { display: flex; align-items: center; gap: 6px; padding: 8px; border: 1px solid #333; border-radius: 8px; background: #1b1b1b; }
+.songlab-sym { font-weight: 700; }
+.songlab-root { color: #aaa; font-size: 12px; }
+.songlab-practice { background: #151515; padding: 10px; border-radius: 8px; }
+.songlab-practice ul { margin: 4px 0; padding-left: 18px; color: #ccc; }

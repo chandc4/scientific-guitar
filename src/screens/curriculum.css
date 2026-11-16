@@ -1,0 +1,17 @@
+.curriculum-screen { display: flex; flex-direction: column; gap: 8px; }
+.curriculum-progress { display: flex; flex-direction: column; gap: 4px; }
+.curriculum-bar { height: 8px; background: #222; border-radius: 4px; overflow: hidden; }
+.curriculum-fill { height: 100%; background: #2a4; }
+.curriculum-next { background: #1a3a1a; padding: 12px; border-radius: 8px; }
+.curriculum-meta { color: #aaa; font-size: 13px; }
+.curriculum-list { display: flex; flex-direction: column; gap: 8px; }
+.curriculum-lesson { padding: 10px; border: 1px solid #333; border-radius: 8px; background: #1b1b1b; }
+.curriculum-lesson.done { border-color: #2a4; }
+.curriculum-lesson.locked { opacity: 0.5; }
+.curriculum-lesson-head { display: flex; justify-content: space-between; }
+.curriculum-lesson-title { font-weight: 600; }
+.curriculum-lesson-phase { color: #888; font-size: 12px; }
+.curriculum-lesson-desc { color: #aaa; font-size: 13px; margin: 4px 0; }
+.curriculum-lesson-foot { display: flex; justify-content: space-between; align-items: center; }
+.curriculum-toggle { padding: 4px 10px; border: 0; border-radius: 6px; background: #2a4; color: #fff; font-size: 13px; }
+.curriculum-locked { color: #666; font-size: 13px; }

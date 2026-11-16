@@ -1,0 +1,21 @@
+.audio-screen { display: flex; flex-direction: column; gap: 8px; }
+.audio-tabs { display: flex; gap: 6px; }
+.audio-tab { flex: 1; padding: 8px 4px; border: 1px solid #333; background: #1b1b1b; color: #ccc; border-radius: 6px; text-transform: capitalize; }
+.audio-tab.active { background: #2a4; color: #fff; border-color: #2a4; }
+.audio-body { flex: 1; }
+.audio-panel { display: flex; flex-direction: column; gap: 12px; padding: 12px 0; }
+.audio-row { display: flex; align-items: center; gap: 8px; }
+.audio-row label { min-width: 90px; }
+.audio-row input[type=range] { flex: 1; }
+.audio-btn { padding: 10px 16px; border: 0; border-radius: 8px; background: #2a4; color: #fff; font-size: 16px; }
+.metronome-display { display: flex; gap: 8px; justify-content: center; }
+.beat-dot { width: 18px; height: 18px; border-radius: 50%; background: #333; }
+.beat-dot.down { background: #555; }
+.beat-dot.active { background: #f84; }
+.beat-dot.active.down { background: #fa2; }
+.tuner-note { font-size: 72px; text-align: center; font-weight: 700; }
+.tuner-cents { text-align: center; color: #aaa; }
+.tuner-bar { position: relative; height: 8px; background: #333; border-radius: 4px; margin: 12px 0; }
+.tuner-needle { position: absolute; top: -6px; width: 4px; height: 20px; background: #f84; transform: translateX(-50%); }
+.level-meter { height: 16px; background: #222; border-radius: 8px; overflow: hidden; }
+.level-fill { height: 100%; background: #2a4; transition: width 60ms linear; }

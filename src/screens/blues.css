@@ -1,0 +1,16 @@
+.blues-screen { display: flex; flex-direction: column; gap: 8px; }
+.blues-tabs { display: flex; gap: 6px; }
+.blues-tab { flex: 1; padding: 8px 4px; border: 1px solid #333; background: #1b1b1b; color: #ccc; border-radius: 6px; text-transform: capitalize; }
+.blues-tab.active { background: #2a4; color: #fff; border-color: #2a4; }
+.blues-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.blues-controls label { color: #aaa; font-size: 13px; }
+.blues-controls select, .blues-controls input { padding: 6px; border-radius: 6px; background: #1b1b1b; color: #eee; border: 1px solid #333; }
+.blues-body { flex: 1; }
+.blues-panel { display: flex; flex-direction: column; gap: 12px; }
+.blues-prog { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.blues-bar { display: flex; align-items: center; gap: 4px; padding: 6px; border: 1px solid #333; border-radius: 6px; background: #1b1b1b; }
+.bar-num { color: #666; font-size: 12px; }
+.bar-chord { font-weight: 700; }
+.blues-playbar { border: 0; background: transparent; color: #2a4; }
+.blues-quiz-prompt { text-align: center; }
+.blues-choices { display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 8px; }

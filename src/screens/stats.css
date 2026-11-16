@@ -1,0 +1,6 @@
+.stats-screen { display: flex; flex-direction: column; gap: 8px; }
+.stats-summary { display: flex; gap: 16px; color: #aaa; }
+.stats-heatmap { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
+.heat-cell { aspect-ratio: 1; background: #2a4; border-radius: 3px; }
+.stats-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.stats-msg { color: #9f9; font-size: 13px; }
